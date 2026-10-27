@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-label="Schematic of point-cloud conditioned generative inverse design and forward-surrogate screening">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1730"/><stop offset="1" stop-color="#143c58"/></linearGradient>
+  <linearGradient id="accent" x2="1" y2="1"><stop stop-color="#70d6ff"/><stop offset="1" stop-color="#6de4c0"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020712" flood-opacity=".25"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#88a9c1" stroke-width="2"/></marker>
+  <style>
+    .title{font:700 30px Arial,sans-serif;fill:#f5fbff}.subtitle{font:15px Arial,sans-serif;fill:#afc9d8}
+    .card{fill:#17344d;stroke:#5d8298;stroke-width:1.5}.h{font:700 17px Arial,sans-serif;fill:#fff}.body{font:14px Arial,sans-serif;fill:#c7dce8}
+    .tag{font:700 11px Arial,sans-serif;fill:#08273b;letter-spacing:1px}.small{font:12px Arial,sans-serif;fill:#a7c5d5}
+    .line{fill:none;stroke:#88a9c1;stroke-width:2.5;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="1200" height="470" rx="22" fill="url(#bg)"/>
+<path d="M0 350 C220 290 360 460 590 390 S980 320 1200 395 L1200 470 L0 470Z" fill="#ffffff" opacity=".035"/>
+<text x="52" y="62" class="title">From target deformation to a feasible heating process</text>
+<text x="52" y="90" class="subtitle">Schematic of the manuscript's point-cloud-based inverse-design and verification workflow</text>
+<rect x="52" y="123" width="230" height="209" rx="16" class="card" filter="url(#shadow)"/>
+<rect x="70" y="141" width="104" height="25" rx="12" fill="url(#accent)"/><text x="84" y="158" class="tag">CONDITION</text>
+<text x="74" y="201" class="h">Target state</text>
+<text x="74" y="235" class="body">Initial plate point cloud</text>
+<text x="74" y="260" class="body">Target 3D displacement field</text>
+<text x="74" y="285" class="body">Plate geometry</text>
+<path d="M287 228 H321" class="line"/>
+<rect x="329" y="123" width="185" height="209" rx="16" class="card" filter="url(#shadow)"/>
+<rect x="347" y="141" width="77" height="25" rx="12" fill="url(#accent)"/><text x="365" y="158" class="tag">CVAE</text>
+<text x="351" y="201" class="h">Generative model</text>
+<text x="351" y="235" class="body">Hierarchical decoder</text>
+<text x="351" y="260" class="body">Line count, positions,</text>
+<text x="351" y="285" class="body">temperature-speed classes</text>
+<path d="M519 228 H553" class="line"/>
+<rect x="561" y="123" width="173" height="209" rx="16" class="card" filter="url(#shadow)"/>
+<rect x="579" y="141" width="105" height="25" rx="12" fill="url(#accent)"/><text x="593" y="158" class="tag">SAMPLING</text>
+<text x="583" y="201" class="h">Candidate set</text>
+<text x="583" y="235" class="body">Multiple alternative</text>
+<text x="583" y="260" class="body">heating processes</text>
+<text x="583" y="291" class="small">20 candidates in comparison</text>
+<path d="M739 228 H773" class="line"/>
+<rect x="781" y="123" width="171" height="209" rx="16" class="card" filter="url(#shadow)"/>
+<rect x="799" y="141" width="98" height="25" rx="12" fill="url(#accent)"/><text x="813" y="158" class="tag">SCREENING</text>
+<text x="803" y="201" class="h">Forward surrogate</text>
+<text x="803" y="235" class="body">Predict full-field</text>
+<text x="803" y="260" class="body">plate deformation</text>
+<text x="803" y="285" class="body">Rank by field error</text>
+<path d="M957 228 H991" class="line"/>
+<rect x="999" y="123" width="149" height="209" rx="16" class="card" filter="url(#shadow)"/>
+<rect x="1017" y="141" width="92" height="25" rx="12" fill="url(#accent)"/><text x="1032" y="158" class="tag">OUTPUT</text>
+<text x="1021" y="201" class="h">Selected process</text>
+<text x="1021" y="235" class="body">Top-ranked design</text>
+<text x="1021" y="260" class="body">Independent FEM</text>
+<text x="1021" y="285" class="body">validation</text>
+<rect x="52" y="365" width="1096" height="62" rx="13" fill="#0b253a" stroke="#355d70"/>
+<circle cx="79" cy="396" r="7" fill="#78e0ca"/><text x="97" y="402" class="body">22,620 finite-element cases</text>
+<circle cx="405" cy="396" r="7" fill="#78e0ca"/><text x="423" y="402" class="body">Pointwise 3D fields</text>
+<circle cx="700" cy="396" r="7" fill="#78e0ca"/><text x="718" y="402" class="body">75 alternative processes independently checked by FEM</text>
+</svg>
