@@ -7,7 +7,7 @@
 </p>
 
 > [!IMPORTANT]
-> **Repository status: documentation only.** No research dataset or model code has been uploaded. The images below are explanatory schematics, not finite-element outputs or evidence that data are available. **Do not use this repository URL as the manuscript's deposited-data location yet.**
+> **Data status: one authentic example case is available.** The complete dataset and model code are **not** deposited here. The two illustrations on this page are explanatory schematics, not finite-element outputs. Please do not describe this repository as a release of all data supporting the paper.
 
 ## Research at a glance
 
@@ -24,21 +24,28 @@ The associated manuscript, **“Generative inverse design of induction line-heat
 | **Screen** | A frozen forward surrogate estimates full-field deformation and ranks candidate processes by target-field error |
 | **Verify** | Selected alternatives are checked independently with finite-element simulations |
 
-The manuscript reports **22,620 valid finite-element cases** and an experiment that generates **20 candidates per target** before selecting the best-ranked process. It also reports independent finite-element checks of **75 alternative processes**. These numbers describe the manuscript; the corresponding files are **not** currently present in this repository.
+The manuscript reports **22,620 valid finite-element cases**, an experiment that generates **20 candidates per target**, and independent finite-element checks of **75 alternative processes**. These numbers describe the study, **not** the contents of this repository.
 
-## Data availability
+## Available example
 
-The manuscript currently states: “The datasets generated and analyzed during the current study are available from the corresponding author on reasonable request.”
+A single real finite-element case is available at **[data/example_case_300x300x08_1line/A1X0030X0000X0000a00](data/example_case_300x300x08_1line/A1X0030X0000X0000a00)**.
 
-A public data release here is pending confirmation by the authors and verification of sharing rights. If a subset is approved, we will identify exactly which cases it contains, provide file-level descriptions and units, and distinguish it from the complete study dataset. We will then update the manuscript's data availability statement so that it matches the actual deposited files and access conditions.
+It contains 3,721 point samples and the corresponding initial point features, three-dimensional displacement components, plate/process parameters, and documented metadata. See the [example-case README](data/example_case_300x300x08_1line/A1X0030X0000X0000a00/README.md) for column definitions and a loading example. The numerical arrays are unchanged from the source case; a local absolute path was removed from the public metadata.
 
-**No dataset DOI has been assigned to this repository.** Do not cite an empty repository as a data deposit.
+This **one-case subset cannot reproduce the manuscript's training, test-set comparisons, or aggregate validation results**. The manuscript currently states that the datasets generated and analyzed during the study are available from the corresponding author on reasonable request. If this repository is cited in a submission form, the manuscript's data availability statement should be updated to identify the public *example* separately from the complete data available on request.
 
-## Planned documentation for an approved release
+No dataset DOI has been assigned. Public visibility does not by itself grant a reuse license; any reuse terms require author approval.
 
-- A file inventory and an explanation of any train/test or validation subsets;
-- Definitions and units for plate geometry, point coordinates, heating process parameters, and 3D displacement fields;
-- The relationship between each released input, process condition, and finite-element output;
-- Access, reuse, and citation information approved by the data owners.
+## Repository map
 
-The two SVG images in `assets/` were created as project illustrations based on the manuscript's concepts; they are not copied from the article figures and are not research data.
+```text
+assets/  — explanatory SVG illustrations (not simulation outputs)
+data/
+  example_case_300x300x08_1line/
+    A1X0030X0000X0000a00/
+      point_features.npy
+      disp.npy
+      global_features.npy
+      meta.json
+      README.md
+```
