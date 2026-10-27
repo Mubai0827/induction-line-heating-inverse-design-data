@@ -1,0 +1,69 @@
+{
+  "sample_name": "A1X0030X0000X0000a00",
+  "source_subdir": "cases_300x300x08_1line",
+  "relative_output_dir": "cases_300x300x08_1line/A1X0030X0000X0000a00",
+  "num_points": 3721,
+  "point_feature_definition": [
+    "x",
+    "y",
+    "z",
+    "mask1",
+    "dist1",
+    "mask2",
+    "dist2",
+    "mask3",
+    "dist3"
+  ],
+  "line_slot_meaning": {
+    "mask1/dist1": "left heating line",
+    "mask2/dist2": "mid heating line",
+    "mask3/dist3": "right heating line"
+  },
+  "line_feature_definition": "For each line slot (left/mid/right): if the line exists, mask=1 and dist=(x-x_line); point on the left side of the line => dist<0; point on the right side of the line => dist>0; point on the line => dist=0; if the line does not exist, mask=0 and dist=0.",
+  "global_feature_definition": [
+    "plate_length",
+    "plate_width",
+    "plate_thickness",
+    "num_lines",
+    "x_left",
+    "x_mid",
+    "x_right",
+    "temp_left",
+    "temp_mid",
+    "temp_right",
+    "speed_left",
+    "speed_mid",
+    "speed_right"
+  ],
+  "global_info": {
+    "sample_name": "A1X0030X0000X0000a00",
+    "plate_code": "A",
+    "plate_length": 300,
+    "plate_width": 300,
+    "plate_thickness": 8,
+    "num_lines": 1,
+    "x_left": 30,
+    "x_mid": 0,
+    "x_right": 0,
+    "temp_left": 445,
+    "temp_mid": 0,
+    "temp_right": 0,
+    "speed_left": 1,
+    "speed_mid": 0,
+    "speed_right": 0,
+    "mode_left": "a",
+    "mode_mid": "0",
+    "mode_right": "0"
+  },
+  "deduplication": {
+    "coordinate_columns": [
+      "x",
+      "y",
+      "z"
+    ],
+    "policy": "keep_first_occurrence_in_original_order",
+    "original_num_points": 3782,
+    "removed_duplicate_points": 61
+  },
+  "release_note": "This metadata was copied from an authentic case; the local source path was removed for the public example."
+}
